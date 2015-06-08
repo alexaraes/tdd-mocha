@@ -1,0 +1,19 @@
+{
+  "name": "tdd-mocha",
+  "version": "0.0.0",
+  "homepage": "https://github.com/alexaraes/tdd-mocha",
+  "authors": [
+    "Alexa Schreffler <alexa.schreffler@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "chai": "~3.0.0"
+  }
+}

@@ -1,7 +1,4 @@
-var mocha = require('mocha'),
-    chai = require('chai');
 
-var assert = chai.assert;
 var expect = chai.expect;
 
 //--- your setup code goes here (i.e. create test instances of your Constructors)
@@ -66,9 +63,9 @@ describe("About Arrays", function() {
         var array = ["peanut", "butter", "and", "jelly"];
 
         expect(array.slice(0, 1).toString()).to.equal('peanut');
-        expect(array.slice(0, 2).toString()).to.equal('peanut, butter');
+        expect(array.slice(0, 2).toString()).to.equal('peanut,butter');
         expect(array.slice(2, 2).toString()).to.equal('');
-        expect(array.slice(2, 20).toString()).to.equal('and, jelly');
+        expect(array.slice(2, 20).toString()).to.equal('and,jelly');
         expect(array.slice(3, 0).toString()).to.equal('');
         expect(array.slice(3, 100).toString()).to.equal('jelly');
         expect(array.slice(5, 1).toString()).to.equal('');
@@ -89,28 +86,28 @@ describe("About Arrays", function() {
 
         var copyOfArray = array.slice();
         copyOfArray[3] = "changed in copyOfArray";
-        expect(array[3]).to.equal("changed in copyOfArray");
+        expect(array[3]).to.equal("three");
     });
 
     it("should push and pop", function() {
         var array = [1, 2];
         array.push(3);
 
-        expect(array.toString()).to.equal('1, 2, 3');
+        expect(array.toString()).to.equal('1,2,3');
 
         var poppedValue = array.pop();
         expect(poppedValue).to.equal(3);
-        expect(array.toString()).to.equal('1, 2');
+        expect(array.toString()).to.equal('1,2');
     });
 
     it("should know about shifting arrays", function() {
         var array = [1, 2];
 
         array.unshift(3);
-        expect(array.toString()).to.equal('3, 1, 2');
+        expect(array.toString()).to.equal('3,1,2');
 
         var shiftedValue = array.shift();
         expect(shiftedValue).to.equal(3);
-        expect(array.toString()).to.equal('1, 2');
+        expect(array.toString()).to.equal('1,2');
     });
 });
